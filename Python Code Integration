@@ -1,0 +1,55 @@
+import json
+
+class KnowledgeBase:
+    def __init__(self, filepath):
+        with open(filepath, 'r') as f:
+            self.kb = json.load(f)
+
+    def get_info(self, category):
+        return self.kb.get(category, {
+            "description": "No information available for this category.",
+            "response_steps": ["Please provide more details for accurate assistance."],
+            "resources": [],
+            "emotional_support": ["I'm here to help you. Please provide more information."]
+        })
+
+
+# Initialize knowledge base once at bot startup
+kb = KnowledgeBase('cybercrime_knowledge.json')
+
+def cybercrime_bot(user_input):
+    tc = ThreatClassifier()
+    rs = RiskScorer()
+    ih = IncidentHelper()
+    el = EvidenceLogger()
+    se = SupportEmpathyAgent()
+    pl = PortalLinker()
+
+    # Detect threat category
+    category = tc.detect_threat(user_input)
+    # Assign risk severity
+    severity = rs.assign_score(category)
+    # Fetch knowledge base info for category
+    info = kb.get_info(category)
+
+    # Log evidence if severity high or critical
+    if severity in ["High", "Critical"]:
+        el.log_evidence(user_input)
+
+    # Response steps from knowledge base or fallback logic
+    steps = info.get("response_steps") or ih.generate_response(category, severity)
+    # Emotional support messages from knowledge base or fallback
+    support_msgs = info.get("emotional_support") or se.provide_support(severity)
+    # Resource links from knowledge base or fallback
+    resources = info.get("resources") or [pl.get_resources(category)]
+
+    # Final structured response
+    response = {
+        "threat_detected": category,
+        "severity": severity,
+        "description": info.get("description", ""),
+        "recommended_steps": steps,
+        "support": support_msgs,
+        "official_resources": resources
+    }
+    return response
