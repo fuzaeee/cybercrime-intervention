@@ -1,0 +1,352 @@
+# Create a comprehensive knowledge base for the Cybercrime Intervention Officer AI
+# Based on the latest research findings from 2024-2025
+
+import json
+import datetime
+
+# Create the comprehensive knowledge base
+knowledge_base = {
+    "metadata": {
+        "version": "1.0",
+        "last_updated": "2025-08-10",
+        "sources": "Based on latest cybersecurity research 2024-2025",
+        "coverage": "Comprehensive cybercrime taxonomy with emerging threats"
+    },
+    
+    # Traditional Cybercrimes
+    "phishing": {
+        "description": "Fraudulent attempts to obtain sensitive information by impersonating trustworthy entities through email, SMS, or voice calls.",
+        "sub_types": ["Email phishing", "Spear phishing", "Whaling", "Smishing (SMS)", "Vishing (Voice)", "Angler phishing"],
+        "emerging_variants": ["AI-generated phishing", "ClickFix campaigns", "SEO poisoning", "QR code phishing"],
+        "response_steps": [
+            "Do not click any suspicious links or download attachments",
+            "Verify the sender through alternative communication methods",
+            "Report the message to your email provider and IT security team",
+            "Change passwords if credentials were entered on suspicious sites",
+            "Enable multi-factor authentication on all accounts",
+            "Monitor financial accounts for unauthorized transactions"
+        ],
+        "resources": [
+            "https://www.ncsc.gov.uk/guidance/phishing",
+            "https://www.fbi.gov/scams-and-safety/common-frauds-and-scams/internet-fraud",
+            "https://phishing.org/report-phishing"
+        ],
+        "emotional_support": [
+            "Phishing attacks are extremely common - you are not alone",
+            "Taking quick action shows you are handling this responsibly",
+            "These attacks target millions of people daily - it's not personal"
+        ],
+        "severity": "Medium",
+        "indicators": ["Urgent language", "Generic greetings", "Suspicious links", "Unexpected attachments", "Request for sensitive info"]
+    },
+    
+    "ransomware": {
+        "description": "Malicious software that encrypts victim's files and demands ransom payment for decryption keys.",
+        "sub_types": ["Traditional ransomware", "Double extortion", "Triple extortion", "Ransomware-as-a-Service (RaaS)", "Mobile ransomware"],
+        "emerging_variants": ["AI-enhanced ransomware", "Quantum-resistant encryption", "Living-off-the-land techniques"],
+        "response_steps": [
+            "IMMEDIATELY disconnect infected devices from all networks",
+            "Do NOT pay the ransom - payment doesn't guarantee file recovery",
+            "Contact law enforcement and report to FBI IC3 or local authorities",
+            "Preserve evidence - don't delete or modify anything",
+            "Restore data from verified clean backups if available",
+            "Run full system scans with updated antimalware tools",
+            "Consider professional incident response services"
+        ],
+        "resources": [
+            "https://www.cisa.gov/ransomware",
+            "https://www.nomoreransom.org",
+            "https://www.ic3.gov/Ransomware"
+        ],
+        "emotional_support": [
+            "Ransomware attacks are traumatic but recoverable with proper response",
+            "You are taking the right steps by not paying and seeking help",
+            "Professional help is available to guide you through recovery"
+        ],
+        "severity": "Critical",
+        "indicators": ["Files encrypted with unknown extensions", "Ransom notes on desktop", "System slowdown", "Inability to open files"]
+    },
+    
+    "business_email_compromise": {
+        "description": "Sophisticated email scams targeting businesses and individuals conducting legitimate financial transactions.",
+        "sub_types": ["CEO fraud", "False invoice schemes", "Account compromise", "Attorney impersonation", "Data theft"],
+        "emerging_variants": ["AI-enhanced impersonation", "Deepfake voice calls", "Multi-channel attacks"],
+        "response_steps": [
+            "Verify ALL financial requests through independent communication channels",
+            "Implement multi-person approval for wire transfers",
+            "Report to FBI IC3 and local law enforcement immediately",
+            "Contact your financial institution to halt/reverse transactions",
+            "Preserve all email evidence and communication logs",
+            "Review and strengthen email security policies",
+            "Conduct employee awareness training"
+        ],
+        "resources": [
+            "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise",
+            "https://www.ic3.gov/crimeschemes/bec"
+        ],
+        "emotional_support": [
+            "BEC attacks target trusted relationships - this exploitation feels personal",
+            "Many organizations face these sophisticated attacks daily",
+            "Quick reporting increases chances of fund recovery"
+        ],
+        "severity": "High",
+        "indicators": ["Urgent payment requests", "Changes to payment instructions", "Requests to bypass normal procedures"]
+    },
+    
+    # Advanced Persistent Threats
+    "advanced_persistent_threats": {
+        "description": "Sophisticated, long-term cyberattacks typically conducted by well-funded groups targeting high-value organizations.",
+        "sub_types": ["Nation-state attacks", "Corporate espionage", "Supply chain infiltration", "Living-off-the-land attacks"],
+        "emerging_variants": ["AI-powered reconnaissance", "Quantum-resistant persistence", "Cloud-native APTs", "IoT-based infiltration"],
+        "response_steps": [
+            "IMMEDIATELY contact cybersecurity incident response professionals",
+            "Preserve all system logs and network traffic data",
+            "Isolate suspected compromised systems without shutting them down",
+            "Document all suspicious activities with timestamps",
+            "Contact law enforcement and relevant authorities (FBI, CISA)",
+            "Implement emergency communication protocols",
+            "Consider professional threat hunting services"
+        ],
+        "resources": [
+            "https://www.cisa.gov/topics/cyber-threats-and-advisories",
+            "https://attack.mitre.org",
+            "https://www.sans.org/white-papers/apt-analysis-methodology/"
+        ],
+        "emotional_support": [
+            "APT attacks are highly sophisticated - detection itself shows good security awareness",
+            "Professional incident response teams specialize in handling these complex threats",
+            "Early detection significantly improves containment and recovery outcomes"
+        ],
+        "severity": "Critical",
+        "indicators": ["Unusual network traffic", "Unauthorized access attempts", "Data exfiltration", "Persistence mechanisms"]
+    },
+    
+    # Supply Chain Attacks
+    "supply_chain_attacks": {
+        "description": "Attacks targeting less-secure elements in the software supply chain to compromise multiple downstream victims.",
+        "sub_types": ["Software supply chain", "Hardware supply chain", "Service provider compromise", "Dependency attacks"],
+        "emerging_variants": ["AI-assisted code injection", "Quantum-vulnerable dependencies", "Cloud supply chain attacks"],
+        "response_steps": [
+            "Immediately assess all third-party software and services",
+            "Isolate systems using compromised suppliers/vendors",
+            "Contact affected vendors for security updates and patches",
+            "Review and audit all supply chain security practices",
+            "Implement software bill of materials (SBOM) tracking",
+            "Report incidents to CISA and industry-specific authorities",
+            "Consider alternative vendors for critical services"
+        ],
+        "resources": [
+            "https://www.cisa.gov/supply-chain-security",
+            "https://www.nist.gov/itl/executive-order-improving-nations-cybersecurity/software-supply-chain-security"
+        ],
+        "emotional_support": [
+            "Supply chain attacks are difficult to prevent - this is not your organization's fault",
+            "Many major organizations have faced similar challenges",
+            "Rapid response and vendor cooperation are key to minimizing impact"
+        ],
+        "severity": "High",
+        "indicators": ["Unexpected software behavior", "Unauthorized network connections", "Vendor security alerts"]
+    },
+    
+    # AI-Enhanced Threats (2025 Emerging)
+    "ai_enhanced_cybercrime": {
+        "description": "Cybercrimes leveraging artificial intelligence and machine learning for enhanced effectiveness and scale.",
+        "sub_types": ["AI-generated phishing", "Deepfake fraud", "Automated vulnerability discovery", "AI-powered social engineering"],
+        "emerging_variants": ["LLM jailbreaking", "Adversarial AI attacks", "AI model poisoning", "Synthetic identity creation"],
+        "response_steps": [
+            "Be extra vigilant of highly convincing fake content",
+            "Verify identity through multiple independent channels",
+            "Implement AI-based detection systems where possible",
+            "Train staff on identifying AI-generated content",
+            "Report suspected AI-enhanced attacks to authorities",
+            "Update security policies to address AI threats",
+            "Consider biometric authentication for high-value transactions"
+        ],
+        "resources": [
+            "https://www.cisa.gov/ai-security-safety",
+            "https://www.nist.gov/itl/ai-risk-management-framework"
+        ],
+        "emotional_support": [
+            "AI-enhanced attacks are increasingly sophisticated - questioning authenticity is smart",
+            "Technology is advancing rapidly, and defenses are improving too",
+            "Your awareness of these new threats is crucial for protection"
+        ],
+        "severity": "High",
+        "indicators": ["Highly personalized content", "Perfect grammar/spelling", "Unusual audio/video quality", "Inconsistent details"]
+    },
+    
+    # Cryptocurrency Crimes
+    "cryptocurrency_crime": {
+        "description": "Criminal activities involving theft, fraud, or illegal acquisition of cryptocurrencies.",
+        "sub_types": ["Wallet theft", "Exchange hacks", "Ponzi schemes", "Fake ICOs", "Cryptojacking", "Pig butchering"],
+        "emerging_variants": ["Cross-chain attacks", "DeFi exploits", "NFT fraud", "Smart contract vulnerabilities"],
+        "response_steps": [
+            "Immediately move remaining assets to secure cold storage",
+            "Report to relevant cryptocurrency exchanges and platforms",
+            "File reports with FBI IC3 and local law enforcement",
+            "Contact blockchain analysis companies for transaction tracing",
+            "Preserve all transaction records and wallet addresses",
+            "Monitor known addresses for movement of stolen funds",
+            "Consider working with cryptocurrency recovery specialists"
+        ],
+        "resources": [
+            "https://www.ic3.gov/crimeschemes/cryptocurrency",
+            "https://www.sec.gov/investor/alerts-bulletins/cryptocurrency"
+        ],
+        "emotional_support": [
+            "Cryptocurrency theft can feel particularly violating due to irreversible transactions",
+            "Blockchain technology sometimes allows for tracking and recovery",
+            "You're not alone - crypto crime affects thousands of victims annually"
+        ],
+        "severity": "High",
+        "indicators": ["Unexpected wallet transactions", "Compromised exchange accounts", "Suspicious DeFi interactions"]
+    },
+    
+    # Zero-Day Exploits (2025 Focus)
+    "zero_day_exploits": {
+        "description": "Attacks exploiting previously unknown vulnerabilities before security patches are available.",
+        "sub_types": ["Software zero-days", "Hardware zero-days", "Web browser exploits", "Operating system flaws"],
+        "emerging_variants": ["AI-discovered vulnerabilities", "Quantum-accelerated exploitation", "IoT zero-days"],
+        "response_steps": [
+            "Immediately isolate affected systems from the network",
+            "Apply emergency patches as soon as vendors release them",
+            "Implement compensating controls to limit exposure",
+            "Monitor systems closely for indicators of compromise",
+            "Report to vendors and security researchers",
+            "Consider engaging threat intelligence services",
+            "Implement zero-trust architecture principles"
+        ],
+        "resources": [
+            "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "https://cve.mitre.org"
+        ],
+        "emotional_support": [
+            "Zero-day attacks are particularly challenging because they're unknown to security community",
+            "Rapid vendor response and patches typically follow disclosure",
+            "Your quick isolation response helps limit potential damage"
+        ],
+        "severity": "Critical",
+        "indicators": ["Unexpected system behavior", "Unauthorized access", "Security tool alerts", "Vendor security advisories"]
+    },
+    
+    # IoT and Botnet Attacks
+    "iot_botnet_attacks": {
+        "description": "Attacks targeting Internet of Things devices to create networks of compromised devices for malicious purposes.",
+        "sub_types": ["Mirai variants", "DDoS botnets", "Cryptojacking botnets", "Spam botnets"],
+        "emerging_variants": ["5G-enabled botnets", "AI-coordinated attacks", "Cross-platform botnets"],
+        "response_steps": [
+            "Immediately change default passwords on all IoT devices",
+            "Update firmware on all connected devices",
+            "Segment IoT devices on separate network",
+            "Monitor network traffic for suspicious patterns",
+            "Disable unnecessary IoT device features and ports",
+            "Implement network monitoring and intrusion detection",
+            "Consider replacing devices that cannot be secured"
+        ],
+        "resources": [
+            "https://www.cisa.gov/iot-security",
+            "https://www.nist.gov/cybersecurity/iot"
+        ],
+        "emotional_support": [
+            "IoT security is challenging due to device limitations",
+            "Simple security measures can significantly reduce risk",
+            "Many manufacturers are improving device security following industry pressure"
+        ],
+        "severity": "Medium",
+        "indicators": ["Slow network performance", "Unexpected device behavior", "High data usage", "Devices not responding normally"]
+    },
+    
+    # Social Engineering (2025 Evolution)
+    "social_engineering": {
+        "description": "Psychological manipulation to trick people into divulging confidential information or performing actions.",
+        "sub_types": ["Pretexting", "Baiting", "Tailgating", "Quid pro quo", "Watering hole attacks"],
+        "emerging_variants": ["AI-enhanced personas", "Multi-channel attacks", "Deepfake impersonation", "Help desk manipulation"],
+        "response_steps": [
+            "Verify identity through independent communication channels",
+            "Never provide sensitive information based on unsolicited requests",
+            "Follow established verification procedures for all requests",
+            "Report suspicious contacts to security team immediately",
+            "Be wary of urgent or emotional appeals",
+            "Trust your instincts if something feels wrong",
+            "Educate others about the attempted social engineering"
+        ],
+        "resources": [
+            "https://www.cisa.gov/social-engineering",
+            "https://www.sans.org/security-awareness-training/resources"
+        ],
+        "emotional_support": [
+            "Social engineering exploits natural human helpfulness and trust",
+            "Even security professionals can fall victim to sophisticated attacks",
+            "Reporting attempts helps protect others from similar attacks"
+        ],
+        "severity": "Medium",
+        "indicators": ["Urgent requests", "Appeals to authority", "Requests to bypass procedures", "Emotional manipulation"]
+    },
+    
+    # Quantum Computing Threats (Future-focused)
+    "quantum_computing_threats": {
+        "description": "Emerging threats from quantum computers that could break current cryptographic protections.",
+        "sub_types": ["Harvest now, decrypt later", "Cryptographic breaks", "Key extraction"],
+        "emerging_variants": ["Post-quantum cryptography attacks", "Hybrid quantum-classical attacks"],
+        "response_steps": [
+            "Assess data sensitivity and protection timeframes",
+            "Begin migration to post-quantum cryptography",
+            "Implement hybrid classical-quantum resistant systems",
+            "Monitor NIST post-quantum cryptography standards",
+            "Evaluate current encryption implementations",
+            "Plan for cryptographic agility in systems",
+            "Consider quantum key distribution for high-value assets"
+        ],
+        "resources": [
+            "https://www.nist.gov/post-quantum-cryptography",
+            "https://www.cisa.gov/quantum-readiness"
+        ],
+        "emotional_support": [
+            "Quantum threats are still largely theoretical and years away",
+            "Industry and government are actively preparing defenses",
+            "Early preparation provides significant security advantages"
+        ],
+        "severity": "Low",
+        "indicators": ["Long-term sensitive data", "Critical cryptographic dependencies", "Legacy encryption systems"]
+    },
+    
+    # Identity Theft and Fraud
+    "identity_theft": {
+        "description": "Unauthorized use of someone's personal information for fraudulent purposes.",
+        "sub_types": ["Financial identity theft", "Medical identity theft", "Synthetic identity theft", "Child identity theft"],
+        "emerging_variants": ["AI-generated fake identities", "Biometric spoofing", "Digital identity theft"],
+        "response_steps": [
+            "Place fraud alerts with all three credit bureaus immediately",
+            "File identity theft report with FTC at IdentityTheft.gov",
+            "Contact banks and credit card companies to freeze accounts",
+            "File police report and obtain copy for records",
+            "Monitor credit reports and financial statements closely",
+            "Consider credit freeze or monitoring services",
+            "Keep detailed records of all actions taken"
+        ],
+        "resources": [
+            "https://www.identitytheft.gov",
+            "https://www.consumer.ftc.gov/identity-theft"
+        ],
+        "emotional_support": [
+            "Identity theft feels deeply personal and violating",
+            "Recovery is possible with persistent effort and proper steps",
+            "Many support resources are available to guide you through recovery"
+        ],
+        "severity": "High",
+        "indicators": ["Unexpected bills or accounts", "Credit report changes", "Missing mail or financial statements"]
+    }
+}
+
+# Save to JSON file
+with open('cybercrime_knowledge_comprehensive.json', 'w', encoding='utf-8') as f:
+    json.dump(knowledge_base, f, indent=2, ensure_ascii=False)
+
+print("Comprehensive Cybercrime Knowledge Base created successfully!")
+print(f"Total crime categories covered: {len(knowledge_base) - 1}")  # -1 for metadata
+print("\nCategories included:")
+for category in knowledge_base.keys():
+    if category != "metadata":
+        print(f"- {category.replace('_', ' ').title()}")
+
+print(f"\nFile size: {len(json.dumps(knowledge_base, indent=2))} characters")
