@@ -1,0 +1,54 @@
+{
+  "phishing": {
+    "description": "A fraudulent attempt to obtain sensitive information by impersonating a trustworthy entity.",
+    "response_steps": [
+      "Do not click any suspicious links or download attachments.",
+      "Report the email or message to your service provider.",
+      "Change your passwords immediately and enable two-factor authentication.",
+      "Check your account statements for unauthorized transactions."
+    ],
+    "resources": [
+      "https://www.ncsc.gov.uk/section/about-this-website/phishing",
+      "https://www.phishing.org/report-phishing"
+    ],
+    "emotional_support": [
+      "Stay calm, phishing attacks are common and can be managed with swift action.",
+      "Remember, you are taking the right steps to protect yourself."
+    ]
+  },
+  "ransomware": {
+    "description": "Malicious software that encrypts files and demands ransom to restore access.",
+    "response_steps": [
+      "Disconnect the affected device from all networks immediately.",
+      "Do not pay the ransom; it does not guarantee file recovery.",
+      "Report the incident to law enforcement and your IT department.",
+      "Restore data from backups if available."
+    ],
+    "resources": [
+      "https://www.ic3.gov/Ransomware",
+      "https://www.cisa.gov/ransomware"
+    ],
+    "emotional_support": [
+      "Ransomware can be frightening, but help is available.",
+      "Focus on containment and recovery to minimize damage."
+    ]
+  },
+  "identity_theft": {
+    "description": "Unauthorized use of someone's personal information for fraudulent purposes.",
+    "response_steps": [
+      "Contact your banks and credit card companies to alert them.",
+      "Place a fraud alert or credit freeze with credit bureaus.",
+      "File a report with your local police department.",
+      "Monitor your accounts and credit reports regularly."
+    ],
+    "resources": [
+      "https://www.identitytheft.gov",
+      "https://www.consumer.ftc.gov/features/feature-0014-identity-theft"
+    ],
+    "emotional_support": [
+      "Identity theft is deeply invasive; seeking support is important.",
+      "You are not alone; many have successfully recovered from it."
+    ]
+  }
+  // Additional cybercrime types can be added similarly
+}
